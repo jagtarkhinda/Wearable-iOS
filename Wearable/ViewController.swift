@@ -15,15 +15,15 @@ class ViewController: UIViewController, WCSessionDelegate {
     //see slides Building WatchOS app
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        <#code#>
+        
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
-        <#code#>
+        
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
-        <#code#>
+        
     }
     
 
@@ -34,6 +34,15 @@ class ViewController: UIViewController, WCSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //Check if the phone supports WCSession
+        if(WCSession.isSupported())
+        {
+            print("phone suppports watch connection")
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
     }
 
     @IBAction func uuu(_ sender: Any) {
