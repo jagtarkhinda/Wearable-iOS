@@ -7,8 +7,21 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        <#code#>
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        <#code#>
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        <#code#>
+    }
+    
 
     
     @IBOutlet weak var label: UILabel!
