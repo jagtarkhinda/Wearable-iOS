@@ -10,6 +10,10 @@ import UIKit
 import WatchConnectivity
 
 class ViewController: UIViewController, WCSessionDelegate {
+    
+    // WCSessionDelegate Functions
+    //see slides Building WatchOS app
+    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         <#code#>
     }
