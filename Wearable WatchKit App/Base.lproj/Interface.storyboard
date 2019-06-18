@@ -15,6 +15,11 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Wearable_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label width="120" height="45" alignment="left" text="ll" textAlignment="center" id="2yp-hH-Spj"/>
+                        <button width="1" alignment="left" title="Next Screen" id="1xh-Fo-Wh6">
+                            <connections>
+                                <segue destination="OBS-9y-f9v" kind="push" id="bc4-EE-sCa"/>
+                            </connections>
+                        </button>
                         <button width="1" height="42" alignment="left" verticalAlignment="bottom" title="Button" id="Ofb-2f-H8q">
                             <connections>
                                 <action selector="push" destination="AgC-eL-Hgc" id="N9v-RZ-atV"/>
@@ -26,6 +31,17 @@
                     </connections>
                 </controller>
             </objects>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="jdG-kY-JTj">
+            <objects>
+                <controller id="OBS-9y-f9v">
+                    <items>
+                        <label width="136" height="70" alignment="center" verticalAlignment="center" text="Welcome to Screen 2" textAlignment="center" numberOfLines="3" id="nuT-sR-dVI"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="323" y="29"/>
         </scene>
     </scenes>
 </document>
