@@ -11,7 +11,10 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-
+    
+    //console does not work with phone when using watch
+    @IBOutlet weak var lab: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -27,5 +30,10 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    @IBAction func push() {
+        lab.setText("wach label")
+    }
+    
 
 }
