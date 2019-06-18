@@ -14,7 +14,7 @@ class InterfaceController: WKInterfaceController {
     
     //console does not work with phone when using watch
     @IBOutlet weak var lab: WKInterfaceLabel!
-    
+    var count:Int = 0
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -32,7 +32,17 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func push() {
-        lab.setText("wach label")
+        print("WATCH: button Pressed!")
+        //updating watch label
+        if(count == 0){
+            lab.setText("Hello")
+            count = 1
+        }
+        else if(count == 1)
+        {
+            lab.setText("BYE")
+            count = 0
+        }
     }
     
 
